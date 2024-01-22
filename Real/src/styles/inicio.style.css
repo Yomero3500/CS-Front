@@ -1,0 +1,66 @@
+.containerGlobaSesion{
+    background-image: url("../assets/img/fondo.jpeg");
+    width: 99%;
+    height: 100%;
+    position:  absolute;
+}
+
+.hdSesion{
+    background-color: rgba(255, 255, 255, 0.719);
+    width: 100%;
+    height: 18%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.hdSesion > img{
+    margin-left: 40%;
+}
+
+.Col1{
+    background-color: rgba(214, 213, 213, 0.571);
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 12%;
+}
+.Col1 > label{
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.Col1 > Form >input{
+    font-size: 1.7em;
+    background-color: transparent;
+    width: 80%;
+    letter-spacing: 1.1em;
+    border: none;
+    outline: none;
+}
+
+.Col2{
+    width: 30%;
+    height: 500px;
+}
+
+.Col2 > img{
+    width: 58%;
+}
+.spLinea{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spLinea > hr{
+    width: 35px;
+    color: #053801;
+    background-color: #0a5500;
+    font-weight: bold;
+    border-color:  rgb(0, 66, 0);
+    height: 5px;
+    margin-right:9px;
+    margin-top: -2%;
+}
