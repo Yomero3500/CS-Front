@@ -7,7 +7,7 @@ import '../styles/inicio.style.css'
 import Swal from "sweetalert2";
 import { Button } from 'react-bootstrap';
 
-function Login() {
+function AgregarUsuario() {
     const [nombre, setNombre] = useState("");
     const [password, setpassword] = useState("");
     const [errorMessages, setErrorMessages] = useState({});
@@ -33,7 +33,7 @@ function Login() {
             return;
         }
         try {
-            const IniciarSesion = await axios.get("http://localhost:3000/players/buscarUsuario",{
+            const IniciarSesion = await axios.post("http://localhost:3000/players/add",{
                 params: {
                     nombre,
                     password
@@ -67,7 +67,7 @@ function Login() {
             <Row>
                 <Col className='Col1' sm={4}>
                     <Form onSubmit={handleSubmit}>
-                        <br />
+                        <label style={{fontSize:"1.5em"}}>Agregar un nuevo usuario</label><br /><br />
                         <input
                             type="text"
                             placeholder='Usuario'
@@ -84,7 +84,7 @@ function Login() {
                             <span className='spLinea'><hr /></span>
                             <span className='spLinea'><hr /></span>
                         </div>
-                        <br /> <br />
+                        <br />
                         <input
                             type="text"
                             placeholder='Password'
@@ -102,8 +102,9 @@ function Login() {
                             <span className='spLinea'><hr /></span>
                             <span className='spLinea'><hr /></span>
                         </div>
-                        <br /> <br />
-                        <Button variant='success' type='submit' style={{fontSize:"1.3em"}}>Ingresar</Button>
+                        <br />
+
+                        <Button variant='success' type='submit' style={{fontSize:"1.3em"}}>Registrar</Button>
                     </Form>
                 </Col>
 
@@ -115,4 +116,4 @@ function Login() {
     )
 }
 
-export default Login
+export default AgregarUsuario
