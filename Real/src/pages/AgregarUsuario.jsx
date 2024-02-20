@@ -33,13 +33,11 @@ function AgregarUsuario() {
             return;
         }
         try {
-            const IniciarSesion = await axios.post("http://localhost:3000/players/add",{
-                params: {
+            const IniciarSesion = await axios.post("http://localhost:3000/players/add",{    
                     nombre,
-                    password
-                }
+                    password       
             })
-            if (IniciarSesion.data.message === "Usuario encontrado") {
+            if (IniciarSesion.data.message === "Usuario creado") {
                 Swal.fire({
                 icon: "success",
                 title: "Easy",
